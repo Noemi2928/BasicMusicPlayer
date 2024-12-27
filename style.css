@@ -1,0 +1,163 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+    background: url(img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+}
+
+.player{
+    padding: 20px 40px;
+    border-radius: 10px;
+    justify-items: center;
+    color: white;
+    background-color: rgba(228, 165, 165, 0.4);
+}
+
+.player #songImage{
+    width: 10rem;
+    height: 10rem;
+    border: 4px solid crimson;
+    border-radius: 50%;
+    margin: 20px 0;
+    background-image: url(img/disco-vinillo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.rotate{
+    animation: rotation 10s infinite linear;
+    transform-origin: center;
+}
+
+@keyframes rotation{
+    from{
+        transform: rotate(0deg);
+    } to {
+        transform: rotate(359deg);
+    }
+}
+
+.player h1{
+    font-family: 'Roboto';
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.player h2{
+    font-family: 'Roboto', serif;
+    font-size: 1rem;
+    font-weight: 400;
+    opacity: 0.6;
+}
+
+.player h3{
+    font-size: 0.6rem;
+    opacity: 0.6;
+    padding-top: 10px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container p{
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+#progressBar{
+    display: flex;
+    appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+    background: rgba(228, 165, 165, 0.4);
+    border-radius: 4px;
+    margin: 30px 0;
+    cursor: pointer;
+}
+
+#progressBar::-webkit-slider-thumb{
+    appearance: none;
+    -webkit-appearance: none;
+    background: rgba(228, 165, 165, 0.9);
+    width: 20px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    outline: 2px solid crimson;
+
+}
+
+.controls{
+    display: flex;
+    justify-content: center;
+}
+
+.controls button{
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    border-radius: 50%;
+    background: none;
+    border-color: crimson;
+    color: crimson;
+    background-color: rgba(228, 165, 165, 0.9);
+}
+
+#start-pause{
+    transform: scale(1.3);
+}
+
+#start-pause:hover{
+    transform: scale(1.4);
+}
+
+.controls button:hover{
+    transform: scale(1.2);
+}
+
+.controls button.random, .controls button.repeatOne{
+    border: none;
+    color: rgb(175, 0, 35);
+    background: none;
+    font-size: x-large;
+}
+
+@media only screen and (max-width: 500px) {
+    body{
+        display: -webkit-box;
+        width: auto;
+        height: auto;
+    }
+    .player{
+        border-radius: 0;
+        width: -webkit-fill-available;
+        align-content: center;
+    }
+    .player #songImage{
+        margin-bottom: 40px;
+    }
+
+    .controls{
+        margin-top: 40px;
+    }
+}
