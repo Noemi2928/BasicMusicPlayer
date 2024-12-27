@@ -152,13 +152,14 @@ body{
         border-radius: 0;
         width: -webkit-fill-available;
         align-content: center;
-        background-color: rgba(228, 165, 165, 0.6);
     }
     .player #songImage{
         margin-bottom: 40px;
     }
-
     .controls{
         margin-top: 40px;
+    }
+    .controls button.random, .controls button.repeatOne{
+        color: rgba(228, 165, 165, 0.9);
     }
 }
