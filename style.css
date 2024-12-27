@@ -137,7 +137,7 @@ body{
 
 .controls button.random, .controls button.repeatOne{
     border: none;
-    color: rgb(175, 0, 35);
+    color: rgba(228, 165, 165, 0.9);
     background: none;
     font-size: x-large;
 }
@@ -158,8 +158,5 @@ body{
     }
     .controls{
         margin-top: 40px;
-    }
-    .controls button.random, .controls button.repeatOne{
-        color: rgba(228, 165, 165, 0.9);
     }
 }
