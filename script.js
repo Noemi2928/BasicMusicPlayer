@@ -123,7 +123,7 @@ repeatSong.addEventListener('click', ()=>{
         repeatSong.style = 'color: white;';
     } else {
         song.loop = false;
-        repeatSong.style = 'color: rgba(228, 165, 165, 0.9);';
+        repeatSong.style = 'color: rgba(228, 165, 165, 0.9)';
     }
 });
 
@@ -152,7 +152,7 @@ randomSong.addEventListener('click', ()=>{
     if(isRandom){
         randomSong.style = 'color: white;';
     }else{
-        randomSong.style = 'color: rgba(228, 165, 165, 0.9);';
+        randomSong.style = 'color: rgba(228, 165, 165, 0.9)';
     }
 });
 
